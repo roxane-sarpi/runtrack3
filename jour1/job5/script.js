@@ -1,6 +1,5 @@
-// Fonction qui affiche les jours de la semaine
 function afficherjourssemaines() {
-    // Tableau contenant les jours de la semaine
+    
     const jourssemaines = [
         "Lundi",
         "Mardi",
@@ -11,11 +10,10 @@ function afficherjourssemaines() {
         "Dimanche"
     ];
 
-    // Boucle for pour parcourir le tableau et afficher chaque jour
-    for (let i = 0; i < jourssemaines.length; i++) {
-        console.log(jourssemaines[i]);
+    for (let jour = 0; jour < jourssemaines.length; jour++) {
+        console.log(jourssemaines[jour]);
     }
 }
 
-// Appel de la fonction
+
 afficherjourssemaines();

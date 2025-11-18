@@ -1,13 +1,13 @@
 function fizzbuzz() {
-    for (let i = 1; i <= 151; i++) {
-        if (i % 3 === 0 && i % 5 ===0) {
+    for (let chiffre = 1; chiffre <= 151; chiffre++) {
+        if (chiffre % 3 === 0 && chiffre % 5 ===0) {
             console.log("Fizzbuzz");
-        } else if (i % 3 === 0) {
+        } else if (chiffre % 3 === 0) {
             console.log("Fizz");
-        } else if (i % 5 === 0) {
+        } else if (chiffre % 5 === 0) {
             console.log("Buzz");
         } else {
-            console.log(i);
+            console.log(chiffre);
         }
     }
 }
