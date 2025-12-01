@@ -1,0 +1,51 @@
+body {
+    margin: auto;
+    padding: 10px;
+}
+
+#imageContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.rainbow-piece {
+    cursor: move;
+    transition: opacity 0.3s;
+    width: calc((100% - 50px) / 6);
+    max-width: 300px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.rainbow-piece:hover {
+    opacity: 0.8;
+}
+
+#message {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#message.win {
+    color: green;
+}
+
+#message.lose {
+    color: red;
+}
+
+#shuffleBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

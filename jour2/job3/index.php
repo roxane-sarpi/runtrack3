@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Afficher / Masquer la citation</title>
+    <title>Compteur de clics</title>
 </head>
 <body>
 
-
-    <button id="button">Afficher / masquer la citation</button>
+    <button id="button">Cliquez ici</button>
+    <p id="compteur">0</p>
 
     <script src="script.js"></script>
 </body>

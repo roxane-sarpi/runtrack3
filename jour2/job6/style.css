@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    transition: all 0.5s ease;
+}
+
+body.konami {
+    background: linear-gradient(135deg, #0b657e 0%, #4f8abb 100%);
+    color: #fff;
+}
+
+
+body.konami .logo {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+
+.success {
+    display: none;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 30px;
+    animation: bounce 0.5s ease;
+}
+
