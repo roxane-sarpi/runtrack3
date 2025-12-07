@@ -1,3 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#gameContainer {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#shuffleBtn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+#shuffleBtn:hover {
+    background: #5568d3;
+}
+
+#imageContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 5px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    cursor: move;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.05);
+    border-color: #667eea;
+}
+
+.puzzle-piece.dragging {
+    opacity: 0.5;
+}
+
 body {
     margin: auto;
     padding: 10px;
