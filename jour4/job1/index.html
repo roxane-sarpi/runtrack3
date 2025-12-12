@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch expression</title>
+</head>
+<body>
+ 
+  <button id="button">Afficher mon expression</button>
+
+  <script>
+    // On récupère le bouton
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', () => {
+      // On utilise fetch pour récupérer le fichier expression.txt
+      fetch('expression.txt')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur réseau : ' + response.status);
+          }
+          return response.text();
+        })
+        .then(text => {
+        console.log('Texte récupéré:', text); // Pour débugger
+        console.log('Longueur:', text.length); // Pour voir si vide
+        
+        const p = document.createElement('p');
+        p.textContent = text;
+        document.body.appendChild(p);
+      })
+        .catch(error => {
+          console.error('Erreur lors du fetch :', error);
+        });
+    });
+  </script>
+</body>
+</html>

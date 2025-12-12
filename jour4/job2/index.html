@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job 2 - JSON Value Key</title>
+</head>
+<body>
+    <h1>Fonction jsonValueKey()</h1>
+    <div id="result"></div>
+
+    <script>
+        function jsonValueKey(jsonString, key) {
+            try {
+                // Convertit la chaîne JSON en objet
+                const obj = JSON.parse(jsonString);
+                
+                // Retourne la valeur associée à la clé, ou null si la clé n'existe pas
+                return obj[key] !== undefined ? obj[key] : null;
+
+            } catch (error) {
+                console.error("Erreur : la chaîne fournie n'est pas un JSON valide.");
+                return null;
+            }
+        }
+
+        // Test de la fonction avec un JSON valide
+        const jsonString = '{"name": "La Plateforme_", "address": "8 rue d\'hozier", "city": "Marseille", "nb_staff": "11", "creation": "2019"}';
+        
+        console.log("Test 1 - Clé 'city':", jsonValueKey(jsonString, "city"));
+        console.log("Test 2 - Clé 'name':", jsonValueKey(jsonString, "name"));
+        console.log("Test 3 - Clé inexistante:", jsonValueKey(jsonString, "country"));
+        console.log("Test 4 - JSON invalide:", jsonValueKey("{invalid json}", "city"));
+
+        // Affichage dans la page
+        document.getElementById('result').innerHTML = `
+            <p><strong>Test 1 - Clé 'city':</strong> ${jsonValueKey(jsonString, "city")}</p>
+            <p><strong>Test 2 - Clé 'name':</strong> ${jsonValueKey(jsonString, "name")}</p>
+            <p><strong>Test 3 - Clé inexistante:</strong> ${jsonValueKey(jsonString, "country")}</p>
+        `;
+    </script>
+</body>
+</html>
