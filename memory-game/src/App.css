@@ -1,0 +1,48 @@
+/* On s'assure que tout le contenu de l'application est centré */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* On organise la page */
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* La grille spécifique aux cartes : 4 colonnes */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 colonnes */
+  gap: 15px;
+}
+
+/* ... garde le reste (styles .card, #root, etc.) comme avant ... */
+
+/* Le style des cartes */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  font-size: 3rem; /* Gros émoji */
+  cursor: pointer; /* Curseur main au survol */
+  user-select: none; /* Empêche de sélectionner le texte */
+}
+
+/* Un petit style pour le bouton pour qu'il ne casse pas la grille */
+button {
+  grid-column: span 2; /* Le bouton prend toute la largeur */
+  margin-bottom: 20px;
+}
